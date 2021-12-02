@@ -15,6 +15,7 @@ You must use Docker with Compose to provide a portable containerized app.
 If Your Not familiar with Docker We already provide a template here.
 
 ## Before you begin
+
 - Provide a **private GitHub repository** with your code and add the following users as collaborators: **@rolivagon @rsebjara @vmolina-enviame @vham**
 - You must provide two containerized microservices with the proper instructions tu run the app.
 - Be specially carful to test your app in a clean environment and from zero, **if we can't run It, your test will be discarded inmediately.** and It will be terrible.
