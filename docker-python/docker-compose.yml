@@ -1,0 +1,29 @@
+version: "3"
+services:
+  ecommerce-app:
+    build: ${ECOMMERCE_SERVICE_PATH}/Docker/app/.
+    container_name: ${ECOMMERCE_SERVICE_NAME}-service
+    env_file:
+      - ${ECOMMERCE_SERVICE_PATH}/Docker/app/.env
+      - .env
+    command: ["gunicorn", "-b", "0.0.0.0:8000", "src.main:app", "--reload", "-t 60"]
+    volumes:
+      - ${ECOMMERCE_SERVICE_PATH}/src:/app/src
+      - ${ECOMMERCE_SERVICE_PATH}/tests:/app/tests      
+    ports:
+      - ${ECOMMERCE_APP_PORT}:8000
+    depends_on:
+      - ecommerce-db
+  ecommerce-db:
+    build: ${ECOMMERCE_SERVICE_PATH}/Docker/database/.
+    restart: always
+    container_name: ${ECOMMERCE_SERVICE_NAME}-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_MYSQL_PASSWORD=${DB_PASSWORD}      
+    ports:
+      - ${ECOMMERCE_MYSQL_PORT}:3306
+    command: 
+      - --default-authentication-plugin=mysql_native_password
