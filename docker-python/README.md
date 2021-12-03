@@ -6,6 +6,8 @@ The template was structured following the principles defined by [clean architect
 - Docker installed
 
 ## Instructions
+Copy .env.example to .env, as environment variables source.
+
 Run ```docker-compose``` command inside **docker-python** folder.
 
 * Building the containers: ```docker-compose build```
