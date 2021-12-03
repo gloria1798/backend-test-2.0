@@ -13,3 +13,9 @@ Run ```docker-compose``` command inside **docker-python** folder.
 * Starting the services: ```docker-compose up -d```
 
 * Stoping the services: ```docker-compose stop```
+
+By default the microservices will run under the following ports:
+- ecommerce-service: 8081
+- delivery-service: 8082 
+
+Check the **.env.example** file to change these or any other params.
