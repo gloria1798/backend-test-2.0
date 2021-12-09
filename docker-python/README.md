@@ -2,11 +2,13 @@
 
 The template was structured following the principles defined by [clean architecture](https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/).
 
+Each service has his own database, but the schema, user, password params are the same for both.
+
 ## Requirements
 - Docker installed
 
 ## Instructions
-Copy .env.example to .env, as environment variables source.
+Copy **.env.example** to **.env**. It will be used as environment variables source.
 
 Run ```docker-compose``` command inside **docker-python** folder.
 

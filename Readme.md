@@ -1,4 +1,4 @@
-# Enviame's Backend Test
+# Enviame's Python Backend Test
 
 This test requires the design and development of two communicated microservices: 
 1 ecommerce marketplace system.
@@ -9,7 +9,6 @@ The project is focused in the logistics aspect of a typical ecommerce process. T
 ## Tech requirements
 You must choose one of the follow languajes + frameworks.
 - Python + flask
-- NodeJS + express
 
 You must use Docker with Compose to provide a portable containerized app. 
 If Your Not familiar with Docker We already provide a template here.
