@@ -44,11 +44,9 @@ class SQLAlchemyClient():
             query = socket_query,
         )
         
-        print("hola DB")
         self.engine = create_engine(db_url, echo = False)
         self.session_factory = sessionmaker(bind = self.engine, expire_on_commit = False)
         self.mapper_registry = registry()
-        print("Chao DB")
 
     def create_tables(self):
 
