@@ -1,8 +1,8 @@
 # Enviame's Python Backend Test
 
 This test requires the design and development of two communicated microservices: 
-1 ecommerce marketplace system.
-2 shipping & Tracking service.
+* ecommerce marketplace system.
+* shipping & Tracking service.
 
 The project is focused in the logistics aspect of a typical ecommerce process. Than means you should make assumptions in other processes like payment or billing.
 
