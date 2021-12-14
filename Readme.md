@@ -13,6 +13,9 @@ You must choose one of the follow languajes + frameworks.
 You must use Docker with Compose to provide a portable containerized app. 
 If Your Not familiar with Docker We already provide a template [here](https://github.com/enviame/backend-test-2.0/tree/main/docker-python).
 
+## Deadline
+The test must be delivered in one week (7 days)
+
 ## Before you begin
 
 - Provide a **private GitHub repository** with your code and add the following users as collaborators: **@rolivagon @rsebjara @vmolina-enviame @vham**
