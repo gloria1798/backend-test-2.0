@@ -108,25 +108,29 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
 }
 ```
 
-2. The posible statuses of a delivery are: **"READY_FOR_PICK_UP", "IN_ORIGIN", "IN_ROUTE_OF_DELIVERY", "NOT_DELIVERED", "DELIVERED".**
-3. The delivery microservice must provide a mechanism to change the status of all orders each 30 seconds, following the next rules:
+2. The delivery microservice must provide a mechanism to change the status of all orders each 30 seconds, following the next rules:
     - The order of the statuses are: "READY_FOR_PICK_UP" -> "IN_ORIGIN" -> "IN_ROUTE_OF_DELIVERY".
     - From "IN_ROUTE_OF_DELIVERY" there are 50% of probability to changue to "NOT_DELIVERED" or "DELIVERED" (randomly).
     - From "NOT_DELIVERED" the order return to "IN_ROUTE_OF_DELIVERY". 
     - The "DELIVERED" status is a final status.
 
-4. The delivery microservice must provide service to register an external endpoint to being reciving notifications of changes in the status of an order (using webhooks). Each status must be notified only one time. 
+3. The delivery microservice must provide service to register an external endpoint to being reciving notifications of changes in the status of an order (using webhooks). Each status must be notified only one time. 
+
+### Definition:
+The posible statuses of a delivery are: **"READY_FOR_PICK_UP", "IN_ORIGIN", "IN_ROUTE_OF_DELIVERY", "NOT_DELIVERED", "DELIVERED".**
 
 ## Aspects to be evaluated
 
-- Functionality
-- Testing
-- Proper use of http responses
-- Proper handling of errors and exceptions
-- Documentation
-- Software design
-- Programming style
-- Appropriate framework use
+- Functionality (36 pts)
+- Testing (12 pts)
+- Documentation (6 pts)
+    - how to run your app
+    - how to test your app
+    - Software design (services architecture diagram)
+- Programming style (6 pts)
+- Proper use of http responses (2 pts)
+- Proper handling of errors and exceptions (2 pts)
+- Appropriate Clean Architecture Template use (+6)
 
 ## Aspects to be ignored
 
