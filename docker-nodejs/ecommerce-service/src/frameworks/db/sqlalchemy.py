@@ -1,4 +1,4 @@
-import os
+import os, time
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import close_all_sessions, sessionmaker, registry
@@ -52,7 +52,16 @@ class SQLAlchemyClient():
 
         # Crea las tablas que aún no están creadas en la base de datos.
 
-        self.mapper_registry.metadata.create_all(self.engine)
+        connection_tries = 1
+        while connection_tries < 5:
+            try:
+                self.mapper_registry.metadata.create_all(self.engine)
+                break
+            except:
+                print("triying connect mysq: ", connection_tries, " time")
+                connection_tries+=1
+                time.sleep(5)
+
 
     def drop_table(self, table):
 
