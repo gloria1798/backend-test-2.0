@@ -128,7 +128,9 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
 #### Definitions:
 The posible statuses of a delivery are: **"READY_FOR_PICK_UP", "IN_ORIGIN", "IN_ROUTE_OF_DELIVERY", "NOT_DELIVERED", "DELIVERED".**
 
-[<img src="http://www.google.com.au/images/nav_logo7.png">](http://google.com.au/)
+##### Services eschema
+
+<img src="http://www.google.com.au/images/nav_logo7.png">
 
 ## Aspects to be evaluated
 
