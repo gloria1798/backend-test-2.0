@@ -128,9 +128,16 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
 #### Definitions:
 The posible statuses of a delivery are: **"READY_FOR_PICK_UP", "IN_ORIGIN", "IN_ROUTE_OF_DELIVERY", "NOT_DELIVERED", "DELIVERED".**
 
-##### Services eschema
+##### Services interaction eschema
+<p align="center">
+  <img src="https://github.com/enviame/backend-test-2.0/blob/main/backend_test_1.drawio.png">
+</p>
 
-<img src="https://github.com/enviame/backend-test-2.0/blob/main/backend_test_1.drawio.png">
+##### Order events
+<p align="center">
+  <img src="https://github.com/enviame/backend-test-2.0/blob/main/events.drawio.png">
+</p>
+
 
 ## Aspects to be evaluated
 
