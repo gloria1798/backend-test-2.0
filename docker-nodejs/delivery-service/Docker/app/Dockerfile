@@ -1,6 +1,5 @@
-# Use the official Python image.
-# https://hub.docker.com/_/python
-FROM python:3.7-slim
+# Use the official Node image.
+FROM node:14
 
 ENV APP_HOME /app
 
@@ -10,7 +9,7 @@ WORKDIR $APP_HOME
 COPY . .
 
 # Install dependencies.
-RUN pip install -r requirements.txt
+RUN npm install
 
 # Run the web service on container startup.
 EXPOSE 8080
