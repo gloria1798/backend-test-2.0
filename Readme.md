@@ -130,7 +130,7 @@ The posible statuses of a delivery are: **"READY_FOR_PICK_UP", "IN_ORIGIN", "IN_
 
 ##### Services eschema
 
-<img src="http://www.google.com.au/images/nav_logo7.png">
+<img src="https://github.com/enviame/backend-test-2.0/blob/main/backend_test_1.drawio.png">
 
 ## Aspects to be evaluated
 
