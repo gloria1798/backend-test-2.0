@@ -1,4 +1,4 @@
-# Enviame's Python Backend Test
+# Enviame's Backend Test
 
 This test requires the design and development of two communicated microservices: 
 * ecommerce marketplace system.
@@ -10,9 +10,14 @@ The project is focused in the logistics aspect of a typical ecommerce process. T
 You must choose one of the follow languajes + frameworks.
 - Python + flask
 - NodeJS + express
+- You must use Docker with Compose to provide a portable containerized app.
+- APIs provided must have an authorization mechanism and it could be any of them: API Key, Bearer Token, Basic Auth, OAuth
 
-You must use Docker with Compose to provide a portable containerized app. 
-If Your Not familiar with Docker We already provide a template [here](https://github.com/enviame/backend-test-2.0/tree/main/docker-python).
+If Your Not familiar with Docker We already provide a template [here](https://github.com/enviame/backend-test-2.0/tree/main/docker-python). The template was structured following the principles defined by [clean architecture]
+
+We encourage you to use our provided template, and we reward you with extra points for two reasons: Reading code written by another dev is a necessary skill, understing of clean architecture principles are desirable.
+
+The template provides mysql, firestore, redis databases out-of-the-box. Be free to use any of them or any combination of them.
 
 ## Deadline
 The test must be delivered in one week (7 days)
@@ -29,7 +34,7 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
 ### User Stories
 
 #### ecommerce microservice
-1. As a "Marketplace Administrator" you may create, view, edit, delete and list "sellers". Each seller requires: name, short description and at least one "Seller Administrator User".
+1. As a "Marketplace Administrator" you may create, view, edit, delete and list "sellers". Each seller requires: name, short description and at least one "Seller User".
 2. As a "Seller User" you may view and edit seller information, and You must add a warehouse address as a previous condition to sell a product.
 3. As a "Seller User" you may create, view, edit, edit, delete and list "products". Each product requires at least: name, short description and quantity.
 4. As an internet user, You may register by your self as a "Marketplace User". Each marketplace user requires at least: email and shipping_addres.
@@ -37,7 +42,7 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
 6. As a "Seller User", You may list and view your "buy orders". You may changue the order's status from "created" to "confirmed", and from "confirmed" to "dispatched". Each order must have: product sku, product quantity and delivery information. When you change an order to dispatched status, the ecommerce microservice notify the delivery microservice through delivery creation endpoint provided by the delivery microservice api.
 7. As a "Marketplace User", You may "cancell" an order only if the status is different to "confirmed". In case an order is cancelled the available stock of the products must be increased.
 8. As a "Marketplace Administrator", You may list, view and "cancell" orders.
-9. As any kind of user you must see the current status of an onder. The posible statuses are: "created", "confirmed", "dispached" and "delivered". The "delivered" status is triggered by the delivery microservices trough a webhook. That means the ecommerce microservice must provide an authenticated endpoint what will be registered in other microservices to notify when an order is delivered (or any other delivery status of an oder)
+9. As any kind of user you must see the current status of an order. The posible statuses are: "created", "confirmed", "dispached" and "delivered". The "delivered" status is triggered by the delivery microservices trough a webhook. That means the ecommerce microservice must provide an authenticated endpoint what will be registered in other microservices to notify when an order is delivered (or any other delivery status of an oder)
 
 
 #### delivery microservice
@@ -86,28 +91,28 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
         "name": "customer name",
         "address": "customer address"
     },
-    "trackig_number": "provided by the delivery microservice",
+    "tracking_number": "provided by the delivery microservice",
     "status": "provided by the delivery microservice"
 }
 ```
 
 - The contract to get the delivery tracking history could be like this example:
-**reequest:**
+**request:**
 ```json
 {
     "foreing_order_id": "",
-    "trackig_number": ""
+    "tracking_number": ""
 }
 ```
 
 **response:**
 ```json
 {
-    "trackig_number": "",
+    "tracking_number": "",
     "status": "",
     "tracking": [{
         "status": "",
-        "date"
+        "date": ""
     }]
 }
 ```
@@ -120,8 +125,10 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
 
 3. The delivery microservice must provide service to register an external endpoint to being reciving notifications of changes in the status of an order (using webhooks). Each status must be notified only one time. 
 
-### Definition:
+#### Definitions:
 The posible statuses of a delivery are: **"READY_FOR_PICK_UP", "IN_ORIGIN", "IN_ROUTE_OF_DELIVERY", "NOT_DELIVERED", "DELIVERED".**
+
+[<img src="http://www.google.com.au/images/nav_logo7.png">](http://google.com.au/)
 
 ## Aspects to be evaluated
 
