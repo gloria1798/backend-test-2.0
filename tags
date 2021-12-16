@@ -111,6 +111,7 @@ ManageBooksUsecase	docker-python/delivery-service/src/books/usecases/manage_book
 ManageBooksUsecase	docker-python/ecommerce-service/src/books/usecases/manage_books_usecase.py	/^class ManageBooksUsecase:$/;"	c
 Note	docker-nodejs/README.md	/^#### Note$/;"	t	section:Project Name: Python Clean Architecture Microservices Templates""Installation and execution
 Note	docker-python/README.md	/^#### Note$/;"	t	section:Project Name: Python Clean Architecture Microservices Templates""Installation and execution
+Order events	README.md	/^##### Order events$/;"	T	subsubsection:Enviame's Backend Test""Before you begin""User Stories""Definitions:
 Project Name: Python Clean Architecture Microservices Templates	docker-nodejs/README.md	/^# Project Name: Python Clean Architecture Microservices Templates$/;"	c
 Project Name: Python Clean Architecture Microservices Templates	docker-python/README.md	/^# Project Name: Python Clean Architecture Microservices Templates$/;"	c
 RedisGreetingCache	docker-nodejs/delivery-service/src/greeting/repositories/redis-greeting-cache.js	/^class RedisGreetingCache {$/;"	c
@@ -137,6 +138,7 @@ SequelizeClient	docker-nodejs/delivery-service/tests/books/repositories/test-seq
 SequelizeClient	docker-nodejs/ecommerce-service/src/frameworks/db/sequelize.js	/^class SequelizeClient {$/;"	c
 SequelizeClient	docker-nodejs/ecommerce-service/src/index.js	/^const SequelizeClient = require('.\/frameworks\/db\/sequelize');$/;"	C
 SequelizeClient	docker-nodejs/ecommerce-service/tests/books/repositories/test-sequelize-books-repository.js	/^const SequelizeClient = require(appRoot + '\/src\/frameworks\/db\/sequelize');$/;"	C
+Services interaction eschema	README.md	/^##### Services interaction eschema$/;"	T	subsubsection:Enviame's Backend Test""Before you begin""User Stories""Definitions:
 Tech requirements	README.md	/^## Tech requirements$/;"	s	chapter:Enviame's Backend Test
 TestBook	docker-python/delivery-service/tests/books/entities/test_book.py	/^class TestBook:$/;"	c
 TestBook	docker-python/ecommerce-service/tests/books/entities/test_book.py	/^class TestBook:$/;"	c
