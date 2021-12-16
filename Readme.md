@@ -123,7 +123,7 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
     - From "NOT_DELIVERED" the order return to "IN_ROUTE_OF_DELIVERY". 
     - The "DELIVERED" status is a final status.
 
-3. The delivery microservice must provide service to register an external endpoint to being reciving notifications of changes in the status of an order (using webhooks). Each status must be notified only one time. 
+3. The delivery microservice must provide service to register an endpoint to being reciving notifications of changes in the status of an order (using webhooks). Each status must be notified only one time. 
 
 #### Definitions:
 The posible statuses of a delivery are: **"READY_FOR_PICK_UP", "IN_ORIGIN", "IN_ROUTE_OF_DELIVERY", "NOT_DELIVERED", "DELIVERED".**
