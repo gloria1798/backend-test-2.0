@@ -1,4 +1,4 @@
-# Project Name: Python Clean Architecture Microservices Templates
+# Project Name: NodeJS Clean Architecture Microservices Templates
 
 ### Description
 
@@ -10,7 +10,7 @@ Each service has his own database, but the schema, user, password params are the
 
 In this example, each application contains two sections: one called "greeting", which is simply an endpoint that returns a greeting indicating the visitor's number, which is obtained from a cache, and the other is "books", which consists of a CRUD of books, which are stored in a database, either in MySQL or in Firestore.
 
-Being a Python project, the following conventions are followed:
+Being a NodeJS project, the following conventions are followed:
 
 - Two-space identation (no tabs), even in non-`.js` files.
 - Class names in `UpperCamelCase`.
@@ -32,7 +32,7 @@ Being a Python project, the following conventions are followed:
 - Inside Docker/app folders of ecommerce-service and delivery-services:
 * Copy **.env.example** to **.env**. It will be used as environment variables source.
 
-Run ```docker-compose``` command inside **docker-python** folder.
+Run ```docker-compose``` command inside **docker-nodejs** folder.
 
 * Building the containers: ```docker-compose build```
 
