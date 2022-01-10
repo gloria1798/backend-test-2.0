@@ -24,7 +24,7 @@ The test must be delivered in one week (7 days)
 
 ## Before you begin
 
-- Provide a **private GitHub repository** with your code and add the following users as collaborators: **@rolivagon @rsebjara @vmolina-enviame @vham**
+- Provide a **private GitHub repository** with your code and add the following users as collaborators: **@rolivagon @rsebjara @vmolina-enviame @vham @rcarrascop**
 - You must provide two containerized microservices with the proper instructions tu run the app.
 - Be especially carful to test your app in a clean environment and from zero, **if we can't run It, your test will be discarded inmediately** and It will be terrible.
 - As a backend test is not requiered to provide any view, quite the opposite we ecourage You to provide an API where We could test all the features.
@@ -40,7 +40,7 @@ In case of any technical questions [Contact Us](mailto:tech-test@enviame.io)
 4. As an "Internet User", You may register as a "Marketplace User". Each marketplace user requires at least: email and shipping_addres.
 5. As a "Marketplace User", You may buy products of different sellers, Your purchase couldn't exceed the stock of a product, and immediately reduce the available stock of the products according your purchase. In case the purchase exceed the stock of a product, the transacction will not be accepted.
 6. As a "Seller User", You may list and view your "buy orders". You may change the order's status from "created" to "confirmed", and from "confirmed" to "dispatched". Each order must have: product sku, product quantity and delivery information. When you change an order to dispatched status, the ecommerce microservice notify the delivery microservice through delivery creation endpoint provided by the delivery microservice api.
-7. As a "Marketplace User", You may "cancell" an order only if the status is different to "confirmed". In case an order is cancelled the available stock of the products must be increased.
+7. As a "Marketplace User", You may "cancell" an order only if the status is "created" or "confirmed". In case an order is cancelled the available stock of the products must be increased.
 8. As a "Marketplace Administrator", You may list, view and "cancell" orders.
 9. As any kind of user you must see the current status of an order. The posible statuses are: "created", "confirmed", "dispached" and "delivered". The "delivered" status is triggered by the delivery microservices trough a webhook. That means the ecommerce microservice must provide an authenticated endpoint what will be registered in other microservices to notify when an order is delivered (or any other delivery status of an oder)
 
