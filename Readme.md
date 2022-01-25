@@ -130,7 +130,7 @@ The posible statuses of a delivery are: **"READY_FOR_PICK_UP", "IN_ORIGIN", "IN_
 
 ## Aspects to be evaluated
 
-It is important that you write a readme with all the necessary instructions on how to run your services and how to properly test them. Please include samples. If the readme is incorrect and we can't run and test your services, we will not be able to review them.
+It is important that you write a readme with all the necessary instructions on how to run your services and how to properly test them. Please include examples. If the readme is incorrect and we can't run and test your services, we will not be able to review them.
 
 - Functionality (36 pts)
 - Testing (12 pts)
